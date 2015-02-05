@@ -1,4 +1,4 @@
-# ala-bootstrap2 [![Travis CI Build](https://travis-ci.org/AtlasOfLivingAustralia/ala-bootstrap2.svg?branch=master)]()
+# ala-bootstrap2 [![Travis CI Build](https://travis-ci.org/AtlasOfLivingAustralia/ala-bootstrap2.svg?branch=master)](https://travis-ci.org/AtlasOfLivingAustralia/ala-bootstrap2)
 
 ## Usage
 ```
