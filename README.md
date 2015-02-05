@@ -3,8 +3,8 @@
 ## Usage
 ```
 runtime ":ala-bootstrap2:1.0"
-
 ```
+
 ## Description
 This is a Grails Plugin to provide the basic set of web resources to correctly apply the current ala web theme based on [bootstrap 2.3.2](http://bootstrapdocs.com/v2.3.2/docs/)
 
