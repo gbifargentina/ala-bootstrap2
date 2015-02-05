@@ -26,3 +26,24 @@ disposition: 'head'
 - All your inline javascript that is not within a resources plugin tag ```<r:script>...</r:script>``` will probably break.
 - If you want to use **JQuery UI** library, you will have to compile a custom distribution that excludes the **autocomplete** widget.
 - You will probably need to explicitly declare the dependency with the new ala-auth plugin.
+
+## Included plugin dependencies
+This plugin relies heavily on the [resources plugin](http://grails.org/plugin/resources):
+```
+runtime ":jquery:1.11.1"
+runtime ':resources:1.2.14'
+if (Environment.current == Environment.PRODUCTION) {
+    runtime ":zipped-resources:1.0.1"
+    runtime ":cached-resources:1.1"
+    compile ":cache-headers:1.1.7"
+    runtime ":yui-minify-resources:0.1.5"
+}
+```
+
+### Important!!
+If you are using **Grails 2.4.x** make sure you disble the asset-pipeline plugin.
+
+## Changelog
+
+- **Version 1.0** (06/02/2015):
+  - Initial release.
