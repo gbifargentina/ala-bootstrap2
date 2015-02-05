@@ -41,7 +41,7 @@ if (Environment.current == Environment.PRODUCTION) {
 ```
 
 ### Important!!
-If you are using **Grails 2.4.x** make sure you disble the asset-pipeline plugin.
+If you are using **Grails 2.4.x** make sure you disable the asset-pipeline plugin.
 
 ## Changelog
 
