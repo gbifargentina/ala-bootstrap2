@@ -25,7 +25,10 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
-        compile 'au.org.ala:ala-cas-client:2.1-SNAPSHOT'
+        compile ('au.org.ala:ala-cas-client:2.1-SNAPSHOT') {
+            // Ivy only
+            transitive = false
+        }
         compile 'com.yahoo.platform.yui:yuicompressor:2.4.8'
     }
 
