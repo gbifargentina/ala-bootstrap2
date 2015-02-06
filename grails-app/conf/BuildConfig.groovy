@@ -1,5 +1,3 @@
-import grails.util.Environment
-
 grails.servlet.version = "2.5"
 grails.project.work.dir = "target"
 grails.project.target.level = 1.6
