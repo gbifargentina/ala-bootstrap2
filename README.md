@@ -32,12 +32,6 @@ This plugin relies heavily on the [resources plugin](http://grails.org/plugin/re
 ```
 runtime ":jquery:1.11.1"
 runtime ':resources:1.2.14'
-if (Environment.current == Environment.PRODUCTION) {
-    runtime ":zipped-resources:1.0.1"
-    runtime ":cached-resources:1.1"
-    compile ":cache-headers:1.1.7"
-    runtime ":yui-minify-resources:0.1.5"
-}
 ```
 
 ### Important!!
