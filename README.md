@@ -38,6 +38,7 @@ runtime ':resources:1.2.14'
 If you are using **Grails 2.4.x** make sure you disable the asset-pipeline plugin.
 
 ## Changelog
-
+- **Version 1.1** (11/02/2015)
+  - Removed harmless but unncesary dependency ```compile 'com.yahoo.platform.yui:yuicompressor:2.4.8'```. This dependency was required by the [YUI Minify Resources ](http://grails.org/plugin/yui-minify-resources) which was removed from this plugin for the final 1.0 release.
 - **Version 1.0** (06/02/2015):
   - Initial release.
