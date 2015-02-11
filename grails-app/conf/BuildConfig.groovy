@@ -27,7 +27,6 @@ grails.project.dependency.resolution = {
             // Ivy only
             transitive = false
         }
-        compile 'com.yahoo.platform.yui:yuicompressor:2.4.8'
     }
 
     plugins {
