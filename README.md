@@ -2,7 +2,7 @@
 
 ## Usage
 ```
-runtime ":ala-bootstrap2:1.2"
+runtime ":ala-bootstrap2:1.3"
 ```
 
 ## Description
@@ -38,6 +38,8 @@ runtime ':resources:1.2.14'
 If you are using **Grails 2.4.x** make sure you disable the asset-pipeline plugin.
 
 ## Changelog
+- **Version 1.3** (18/02/2015)
+  - Added "servlet-api" dependency exclusion that was being introduced by the ala-cas-client library
 - **Version 1.2** (12/02/2015)
   - Explicitly declares the plugin name for each declaration in the Resources configuration file. Apparently this solves issues with the final WAR packaging in some cases.
 - **Version 1.1** (11/02/2015)
