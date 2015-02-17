@@ -32,6 +32,6 @@
 .classpath
 .project
 /.idea
-.sha1
+*.sha1
 *.tld
 out/

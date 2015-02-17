@@ -26,6 +26,8 @@ grails.project.dependency.resolution = {
         compile ('au.org.ala:ala-cas-client:2.1-SNAPSHOT') {
             // Ivy only
             transitive = false
+            // For Maven
+            excludes "servlet-api"
         }
     }
 
