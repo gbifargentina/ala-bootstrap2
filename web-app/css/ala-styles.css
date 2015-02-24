@@ -32,7 +32,7 @@ strong{color:#5f5d60;}
 .navbar-inner a.brand {display: block;float: left;color: #f47a61;font-size: 16px;padding-right: 15px;}
 .navbar-inner ul.nav > li > a,.navbar-inner  a.brand {padding: 15px 10px;line-height: 20px;text-shadow: none;}
 .navbar-inner  ul.dropdown-menu li a {padding: 3px 20px;}
-.navbar-inner form {margin: 0;}
+.navbar-inner form {margin: 0; position: relative; left: 0; display: block; float: left;}
 .navbar-inner form input {width: 172px;}
 .navbar-inner form input, .navbar form .btn {margin-top: 10px;}
 .navbar .btn-navbar {margin: 8px 15px;padding: 9px 10px;}
@@ -125,6 +125,7 @@ img.ncris{margin-top:8px;}
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+    body { padding-top: 50px;}
     .navbar .container{margin-left: 30px;}
     #main{padding-right: 20px;padding-left: 20px;}
     img.aus-govt,img.ncris{max-width:200px;}
