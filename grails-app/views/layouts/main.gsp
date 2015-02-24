@@ -17,7 +17,7 @@
     <r:layoutResources/>
     <g:layoutHead />
 </head>
-<body class="${pageProperty(name:'body.class')?:'nav-datasets'}" id="${pageProperty(name:'body.id')}" onload="${pageProperty(name:'body.onload')}">
+<body class="${pageProperty(name:'body.class')}" id="${pageProperty(name:'body.id')}" onload="${pageProperty(name:'body.onload')}">
 <g:set var="fluidLayout" value="${pageProperty(name:'meta.fluidLayout')?:grailsApplication.config.skin?.fluidLayout}"/>
 <g:set var="containerType" value="${fluidLayout ? 'container-fluid' : 'container'}"/>
 <!-- Navbar -->
@@ -30,7 +30,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                <img alt="brand" class="brand img-responsive" src="${g.resource(dir:'images', file:'supporting-graphic-element-flat.png', plugin:'ala-bootstrap2')}">
+                <img alt="brand" class="brand img-responsive" src="${g.resource(dir:'', plugin:'ala-bootstrap2')}/images/supporting-graphic-element-flat.png">
             </a>
             <a class="brand" href="/">
                 The Atlas Of Living Australia
@@ -83,7 +83,6 @@
     </div><!-- /.navbar-inner -->
 </div><!-- /.navbar -->
 
-
 <!-- Container -->
 <div class="${containerType}" id="main">
     <g:layoutBody />
@@ -95,16 +94,16 @@
 </div>
 
 <!-- Footer -->
-<footer class="main-footer">
-    <div class="${containerType}">
-        <div class="row">
+<div class="container-fluid ftr-container">
+    <footer class="container">
+        <div class="row-fluid ftr-primary">
             <div class="span4">
                 <p class="lead">
                     The Atlas of Living Australia is a collaborative, national project that aggregates
                     biodiversity data from multiple sources and makes it available and usable online.
                 </p>
                 <p class="lead sharing">
-                &copy; Sharing biodiversity knowledge to shape our future.
+                Sharing biodiversity knowledge to shape our future.
                 </p>
             </div>
 
@@ -117,7 +116,6 @@
                     <li><a href="#">Upload media</a></li>
                 </ul>
             </div>
-
             <div class="span2">
                 <ul class="link-list">
                     <li class="heading"><a href="#">Atlas Features &rarr;</a></li>
@@ -127,8 +125,6 @@
                     <li><a href="#">Atlas Mobile Apps</a></li>
                 </ul>
             </div>
-
-            <!-- <div class="clearfix visible-xs-block visible-lg-inline-block"></div> -->
 
             <div class="span2">
                 <ul class="link-list">
@@ -150,27 +146,21 @@
                     <li><a href="#">Associated Sites</a></li>
                 </ul>
             </div>
-
         </div><!-- End row -->
 
-    </div><!-- End container -->
-</footer><!-- End Main footer -->
-
-<footer class="secondary-footer">
-    <div class="${containerType}">
-        <div class="row">
+        <!-- SECONDARY FOOTER -->
+        <div class="row-fluid ftr-secondary">
             <div class="span4">
-
-                <div class="row">
-                    <div class="span6">
-                        <img class="img-responsive ncris" src="${g.resource(dir:'images', file:'NCRIS-Logo_Mono.png', plugin:'ala-bootstrap2')}"><!-- Logo -->
-                    </div>
-
-                    <div class="span6">
-                        <img class="img-responsive aus-govt" src="${g.resource(dir:'images', file:'Aust-Govt-Initiative-stacked-64.png', plugin:'ala-bootstrap2')}"><!-- Logo -->
+                <div class="row-fluid">
+                    <div class="span12">
+                        <img class="img-responsive ncris" src="${g.resource(dir:'', plugin:'ala-bootstrap2')}/images/NCRIS_mono.svg"><!-- Logo -->
                     </div>
                 </div>
-
+                <div class="row-fluid">
+                    <div class="span12">
+                        <img class="img-responsive aus-govt" src="${g.resource(dir:'', plugin:'ala-bootstrap2')}/images/aus_initiative_stacked.svg"><!-- Logo -->
+                    </div>
+                </div>
             </div>
             <div class="span4">
                 <p>
@@ -178,11 +168,10 @@
                 </p>
                 <div class="row-fluid">
                     <div class="span6">
-                        <img class="img-responsive csiro" src="${g.resource(dir:'images', file:'CSIRO_Solid_RGB.svg', plugin:'ala-bootstrap2')}"><!-- Logo -->
+                        <img class="img-responsive csiro" src="${g.resource(dir:'', plugin:'ala-bootstrap2')}/images/CSIRO_Solid_RGB.svg"><!-- Logo -->
                     </div>
-
                     <div class="span6">
-                        <img class="img-responsive gbif" src="${g.resource(dir:'images', file:'GBIF_logo_short_form.gif', plugin:'ala-bootstrap2')}"><!-- Logo -->
+                        <img class="img-responsive gbif" src="${g.resource(dir:'', plugin:'ala-bootstrap2')}/images/GBIF_logo_short_form.gif"><!-- Logo -->
                     </div>
                 </div>
             </div>
@@ -190,20 +179,17 @@
                 <p>
                     This site is licensed under a <a href="#">Creative Commons Attribution 3.0 Australia License</a>.
                 </p>
-                <p><img class="img-responsive" src="${g.resource(dir:'images', file:'creativecommons.png', plugin:'ala-bootstrap2')}"><!-- Logo --><!-- http://placehold.it/150x50 --></p>
+                <p><img class="img-responsive" src="${g.resource(dir:'', plugin:'ala-bootstrap2')}/images/creativecommons.png"><!-- Logo --><!-- http://placehold.it/150x50 --></p>
                 <p>
                     Provider content may be covered by other <a href="#">Terms of Use</a>.
                 </p>
             </div>
         </div><!-- End row -->
+        <!-- END SECONDARY FOOTER -->
 
-    </div><!-- End container -->
-</footer>
-
-<footer class="social-footer">
-    <div class="${containerType}">
-        <div class="row">
-            <div class="span3">
+        <!-- SOCIAL FOOTER -->
+        <div class="row-fluid ftr-social">
+            <div class="span4">
                 <ul class="social inline">
                     <li><a class="soc-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a class="soc-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -212,17 +198,16 @@
                 </ul>
             </div>
 
-            <div class="span4">
+            <div class="span8 soc-nav">
                 <ul class="footer-nav inline">
                     <li ><a href="#">Contact Us</a></li>
                     <li ><a href="#">Get Involved</a></li>
                     <li ><a href="#">Explore the ALA</a></li>
                 </ul>
             </div>
-
         </div><!-- End row -->
-    </div><!-- End container -->
-</footer>
+    </footer>
+</div>
 
 <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
