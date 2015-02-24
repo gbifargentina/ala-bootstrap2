@@ -38,6 +38,8 @@ runtime ':resources:1.2.14'
 If you are using **Grails 2.4.x** make sure you disable the asset-pipeline plugin.
 
 ## Changelog
+- **Version 1.4** (24/02/2015)
+  - This version, unlike 1.3, truly excludes the servlet-api dependency from being resolve as a dependency in the host app
 - **Version 1.3** (18/02/2015)
   - Added "servlet-api" dependency exclusion that was being introduced by the ala-cas-client library
 - **Version 1.2** (12/02/2015)
