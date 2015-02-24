@@ -19,20 +19,210 @@
 </head>
 <body class="${pageProperty(name:'body.class')?:'nav-datasets'}" id="${pageProperty(name:'body.id')}" onload="${pageProperty(name:'body.onload')}">
 <g:set var="fluidLayout" value="${pageProperty(name:'meta.fluidLayout')?:grailsApplication.config.skin?.fluidLayout}"/>
-<hf:banner logoutUrl="${g.createLink(controller:"logout", action:"logout", absolute: true)}" fluidLayout="${fluidLayout}"/>
+<g:set var="containerType" value="${fluidLayout ? 'container-fluid' : 'container'}"/>
+<!-- Navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="${containerType}">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img alt="brand" class="brand img-responsive" src="${g.resource(dir:'images', file:'supporting-graphic-element-flat.png', plugin:'ala-bootstrap2')}">
+            </a>
+            <a class="brand" href="/">
+                The Atlas Of Living Australia
+            </a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="#">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#">Get involved</a>
+                    </li>
+                    <li class="dropdown font-xsmall">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            ALA Apps
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Spatial portal</a></li>
+                            <li ><a href="#">Occurrence search</a></li>
+                            <li ><a href="#">Fish map</a></li>
+                            <li ><a href="#">Regions</a></li>
+                            <li ><a href="#">Explore your area</a></li>
 
-<hf:menu fluidLayout="${fluidLayout}"/>
+                            <li class="divider"></li>
+                            <li><a href="#">Record a sighting</a></li>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">DigiVol</a></li>
+                            <li><a href="#">Fieldcapture</a></li>
+                            <li><a href="#">Soils to satellite</a></li>
+                            <li><a href="#">Traits, species lists</a></li>
 
-<div class="${fluidLayout?'container-fluid':'container'}" id="main-content">
+                            <li class="divider"></li>
+                            <li><a href="#">Community portals</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Datasets browser</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li ><a href="#">My profile</a></li>
+                    <li ><a href="#">Login</a></li>
+                </ul>
+                <form class="navbar-form" role="search">
+                    <input type="text" class="form-control" placeholder="Search the Atlas">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div><!-- /.nav-collapse -->
+        </div><!-- /.container -->
+    </div><!-- /.navbar-inner -->
+</div><!-- /.navbar -->
+
+
+<!-- Container -->
+<div class="${containerType}" id="main">
     <g:layoutBody />
-</div><!--/.container-->
+</div><!-- End container #main col -->
 
-<div class="${fluidLayout?'container-fluid':'container'} hidden-desktop">
+<div class="${containerType} hidden-desktopZ hide">
     <%-- Borrowed from http://marcusasplund.com/optout/ --%>
     <a class="btn btn-small toggleResponsive"><i class="icon-resize-full"></i> <span>Desktop</span> version</a>
 </div>
 
-<hf:footer/>
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="${containerType}">
+        <div class="row">
+            <div class="span4">
+                <p class="lead">
+                    The Atlas of Living Australia is a collaborative, national project that aggregates
+                    biodiversity data from multiple sources and makes it available and usable online.
+                </p>
+                <p class="lead sharing">
+                &copy; Sharing biodiversity knowledge to shape our future.
+                </p>
+            </div>
+
+            <div class="span2">
+                <ul class="link-list">
+                    <li class="heading"><a href="#">Citizen Science &rarr;</a></li>
+                    <li><a href="#">About CS in the ALA</a></li>
+                    <li><a href="#">DigiVol Portal</a></li>
+                    <li><a href="#">Record a sighting</a></li>
+                    <li><a href="#">Upload media</a></li>
+                </ul>
+            </div>
+
+            <div class="span2">
+                <ul class="link-list">
+                    <li class="heading"><a href="#">Atlas Features &rarr;</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Sandbox</a></li>
+                    <li><a href="#">Digitisation guidance</a></li>
+                    <li><a href="#">Atlas Mobile Apps</a></li>
+                </ul>
+            </div>
+
+            <!-- <div class="clearfix visible-xs-block visible-lg-inline-block"></div> -->
+
+            <div class="span2">
+                <ul class="link-list">
+                    <li class="heading"><a href="#">Atlas Data &rarr;</a></li>
+                    <li><a href="#">Sensitive Data</a></li>
+                    <li><a href="#">Data integration</a></li>
+                    <li><a href="#">Dataset upload</a></li>
+                    <li><a href="#">Species list upload</a></li>
+                </ul>
+            </div>
+
+            <div class="span2">
+                <ul class="link-list">
+                    <li class="heading"><a href="#">Contact Us &rarr;</a></li>
+                    <li><a href="#">Communications</a></li>
+                    <li><a href="#">About the Atlas</a></li>
+                    <li><a href="#">My Sightings</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Associated Sites</a></li>
+                </ul>
+            </div>
+
+        </div><!-- End row -->
+
+    </div><!-- End container -->
+</footer><!-- End Main footer -->
+
+<footer class="secondary-footer">
+    <div class="${containerType}">
+        <div class="row">
+            <div class="span4">
+
+                <div class="row">
+                    <div class="span6">
+                        <img class="img-responsive ncris" src="${g.resource(dir:'images', file:'NCRIS-Logo_Mono.png', plugin:'ala-bootstrap2')}"><!-- Logo -->
+                    </div>
+
+                    <div class="span6">
+                        <img class="img-responsive aus-govt" src="${g.resource(dir:'images', file:'Aust-Govt-Initiative-stacked-64.png', plugin:'ala-bootstrap2')}"><!-- Logo -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="span4">
+                <p>
+                    The Atlas of Living Australia is funded by <a href="#">The Commonwealth Scientific and Industrial Research Organisation</a> (CSIRO) and is a node of the <a href="#">Global Biodiversity Information Facility (GBIF)</a>.
+                </p>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <img class="img-responsive csiro" src="${g.resource(dir:'images', file:'CSIRO_Solid_RGB.svg', plugin:'ala-bootstrap2')}"><!-- Logo -->
+                    </div>
+
+                    <div class="span6">
+                        <img class="img-responsive gbif" src="${g.resource(dir:'images', file:'GBIF_logo_short_form.gif', plugin:'ala-bootstrap2')}"><!-- Logo -->
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+                <p>
+                    This site is licensed under a <a href="#">Creative Commons Attribution 3.0 Australia License</a>.
+                </p>
+                <p><img class="img-responsive" src="${g.resource(dir:'images', file:'creativecommons.png', plugin:'ala-bootstrap2')}"><!-- Logo --><!-- http://placehold.it/150x50 --></p>
+                <p>
+                    Provider content may be covered by other <a href="#">Terms of Use</a>.
+                </p>
+            </div>
+        </div><!-- End row -->
+
+    </div><!-- End container -->
+</footer>
+
+<footer class="social-footer">
+    <div class="${containerType}">
+        <div class="row">
+            <div class="span3">
+                <ul class="social inline">
+                    <li><a class="soc-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="soc-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="soc-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a class="soc-envelope" href="#"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="span4">
+                <ul class="footer-nav inline">
+                    <li ><a href="#">Contact Us</a></li>
+                    <li ><a href="#">Get Involved</a></li>
+                    <li ><a href="#">Explore the ALA</a></li>
+                </ul>
+            </div>
+
+        </div><!-- End row -->
+    </div><!-- End container -->
+</footer>
 
 <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
