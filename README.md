@@ -2,11 +2,11 @@
 
 ## Usage
 ```
-runtime ":ala-bootstrap2:1.3"
+runtime ":ala-bootstrap2:2.0-SNAPSHOT"
 ```
 
 ## Description
-This is a Grails Plugin to provide the basic set of web resources to correctly apply the current ala web theme based on [bootstrap 2.3.2](http://bootstrapdocs.com/v2.3.2/docs/)
+This is a Grails Plugin to provide the basic set of web resources to correctly apply the **new 2015** ala web theme based on [bootstrap 2.3.2](http://bootstrapdocs.com/v2.3.2/docs/)
 
 It provides the same layout as the latest available version of ala-web-theme but with the following differences:
 
