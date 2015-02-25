@@ -47,8 +47,8 @@ strong{color:#5f5d60;}
 
 /*.main-footer{margin-top: 100px;}*/
 .ftr-container{background-color:#F2F2F2;}
-.ftr-primary{margin-top: 100px;}
-.ftr-secondary,.ftr-social{margin-top: 1em;}
+.ftr-primary{margin-top: 50px;}
+.ftr-secondary,.ftr-social{margin-top: 1em;margin-bottom: 4em;}
 footer p.lead{color:#C44D34;}
 footer p{font-size: 14px;line-height: 1.6em;}
 .ftr-social{margin-bottom:20px;}
@@ -110,7 +110,12 @@ img.ncris{margin-top:8px;}
     div.navbar.navbar-inverse.navbar-fixed-top > div > div{margin: 0 30px}
     #main{padding-right: 20px;padding-left: 20px;}
     img.aus-govt,img.ncris{max-width:150px;}
+    .navbar-inner  a.brand { padding: 15px 7px; font-size: 14px;}
+    .navbar .btn-navbar {margin: 8px 7px;}
+    .navbar-inner ul.nav > li > a {padding: 5px;}
+    .navbar-inner .container-fluid { padding-left: 0; padding-right: 0; }
     .help-text {margin-top: 1em;}
+    p.lead {font-size: 16px;}
     .container-fluid.ftr-container{padding-right: 20px;padding-left: 20px;}
     img.aus-govt,img.gbif{padding-bottom: 20px;}
     .navbar-fixed-top .navbar-inner { padding: 0;}
@@ -121,6 +126,7 @@ img.ncris{margin-top:8px;}
         z-index: 1030;
         /*margin-bottom: 0;*/
     }
+    .navbar-inner .nav-collapse.in.collapse .navbar-form .general-search { width: 170px; }
 }
 
 /* Extra Small Devices, Phones */
@@ -130,7 +136,8 @@ img.ncris{margin-top:8px;}
     #main{padding-right: 20px;padding-left: 20px;}
     img.aus-govt,img.ncris{max-width:200px;}
     .navbar-inner ul.nav { margin: 0; }
-    .navbar-inner ul.nav > li > a {padding: 5px;}
+    .navbar-inner ul.nav > li > a {padding: 7px;}
+    .navbar-inner  a.brand { padding: 15px 10px; font-size: 16px;}
     .navbar-fixed-top .navbar-inner {padding: 0;}
     .container-fluid.ftr-container{padding-right: 20px;padding-left: 20px;}
 }
@@ -141,6 +148,7 @@ img.ncris{margin-top:8px;}
     .input-group.banner{padding-top:10em;}
     .navbar-inner ul.nav {margin: 0;}
     .navbar-inner ul.nav > li > a {padding: 10px;}
+    p.lead {font-size: 24px;}
 }
 
 /* Medium Devices, Desktops */
