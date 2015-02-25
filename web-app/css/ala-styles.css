@@ -15,11 +15,7 @@ a,.link-list .heading a{color:#C44D34;}
 .link-list .heading{font-weight:700;margin-bottom:10px;}
 blockquote{color:#C44D34;font-size:21px;font-weight:300;line-height:1.4em;margin-bottom:20px;}
 code{font-size:13px;}
-h1{font-weight:200;margin-bottom:.5em;}
-h2{font-size:2.4em;}
-h2,h3{color:#5f5d60;margin-bottom:16px;margin-top:0;}
-h3{font-size:1.25em;}
-h3,h4,h5{border:0 solid #efefef;padding-bottom:5px;}
+h1,h2,h3,h4,h5{font-weight:300;color:#5f5d60;}
 li,ul{color:#637073;font-size:14px;font-weight:200;line-height:1.6em;}
 p{font-size: 14px;line-height: 1.6em;}
 strong{color:#5f5d60;}
@@ -45,24 +41,18 @@ strong{color:#5f5d60;}
 /* Footer
 ================================= */
 
-/*.main-footer{margin-top: 100px;}*/
+
 .ftr-container{background-color:#F2F2F2;}
 .ftr-primary{margin-top: 50px;}
 .ftr-secondary,.ftr-social{margin-top: 1em;margin-bottom: 4em;}
 footer p.lead{color:#C44D34;}
 footer p{font-size: 14px;line-height: 1.6em;}
 .ftr-social{margin-bottom:20px;}
-/*.main-footer {margin: 100px 0 0;padding: 30px 0 0;}*/
-/*.main-footer a {color:#637073;}*/
-/*.main-footer,.secondary-footer,.social-footer {font-size:.95em;}*/
-/*.social-footer{background-color:#F2F2F2;}*/
 .ftr-social > div{padding:2em 0;}
 ul.footer-nav.list-inline{padding-top:2px;}
 footer.main-footer > div{padding-bottom:0;}
 .soc-nav{margin-top: 8px;}
-/*footer .container,.social-footer > div{padding:2em 1.5em;}*/
-/*.main-footer li,.secondary-footer li,.social-footer li,.main-footer p,.secondary-footer p,.social-footer p{font-size:15px;}*/
-/*body > div.container-fluid.ftr-container > footer > div.row-fluid*/.ftr-primary ul > li > a{color: #637073;line-height: 1.8em;}
+.ftr-primary ul > li > a{color: #637073;line-height: 1.8em;}
 
 /* Metrics
 ================================= */
@@ -90,7 +80,7 @@ li .soc-twitter:hover{background-color:#5CBBDC;}
 /* Images (img)
 ================================= */
 
-#main > div > h2{margin:0 0 .8em;}
+/*#main > div > h2{margin:0 0 .8em;}*/
 .panel-body img{margin:0 10px 10px 0;}
 .secondary-footer img{margin-bottom:2em;}
 img.aus-govt,img.ncris{max-width:200px;}
