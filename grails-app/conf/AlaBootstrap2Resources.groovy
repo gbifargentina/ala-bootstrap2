@@ -5,7 +5,6 @@ modules = {
         resource url:[plugin: 'ala-bootstrap2', dir: 'css',file:'bootstrap.css'], attrs:[media:'screen, projection, print']
         resource url:[plugin: 'ala-bootstrap2', dir: 'css',file:'bootstrap-responsive.css'], attrs:[media:'screen, projection, print']
         resource url:[plugin: 'ala-bootstrap2', dir:'css',file:'ala-styles.css']
-        resource url: "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     }
 
     core {
