@@ -43,52 +43,6 @@ h4 { font-size: @baseFontSize * 1.25; }
 @iconSpritePath: "../images/glyphicons-halflings.png";
 @iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-
-
-
-//#site-header {
-//    margin-bottom: 0px;
-//    .hidden-desktop {
-//        .hide; // should be overridden by responsive css
-//    }
-//    .navbar-inner {
-//        min-height: 56px;
-//        #gradient .vertical (@headerGrey, @headerGreyLight); //border-bottom: 2px solid #5c656b;
-//        .navbar-text {
-//            line-height: 56px;
-//            font-size: 13px;
-//            color: #FFFFFF;
-//        }
-//        ul.nav {
-//            padding: 10px;
-//        }
-//        ul.nav > li > a {
-//            padding: 8px 5px;
-//            font-size: 13px;
-//            color: @white;
-//        }
-//        a.btn-navbar {
-//            margin-top: 12px;
-//        }
-//        .navbar-form {
-//            margin-top: 8px;
-//            margin-left: 15px;
-//        }
-//        #search-2013 {
-//            width:240px;
-//        }
-//        .input-append {
-//            padding:12px 10px 10px 0;
-//            button i {
-//                margin-left:-3px;
-//            }
-//        }
-//        .navbar-form .btn {
-//            padding: 4px 8px;
-//        }
-//    }
-//}
-
 // common rules
 .orange-nav-bar {
     background-color: @alaOrange;
@@ -100,138 +54,6 @@ h4 { font-size: @baseFontSize * 1.25; }
     text-shadow: none;
     font-size: 14px;
 }
-
-// TODO: make fonts and spacing smaller for small screens when menu is hidden
-//#nav-site .navbar-inner {
-//    min-height: 38px;
-//    margin-bottom: 15px;
-//    padding-right: 20px;
-//    padding-left: 20px;
-//    background-color: @alaOrange;
-//    background-image: none; //border-bottom: 1px solid @alaOrangeDark;
-//    filter: none; // IE8 fix
-//    -ms-filter: none; // IE8 fix
-//    .nav > li > a {
-//        .orange-nav-bar;
-//        padding: 9px 13px 9px;
-//        margin-right: -1px;
-//        //text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
-//        &:hover {
-//            background-color: @headerGreyDark;
-//            //text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
-//        }
-//    }
-//
-//    // body class used to set active menu
-//    body.nav-species & .nav > li.nav-species > a {
-//        background-color: @headerGreyDark;
-//    }
-//    body.nav-locations & .nav > li.nav-locations > a {
-//        background-color: @headerGreyDark;
-//    }
-//    body.nav-collections & .nav > li.nav-collections > a {
-//        background-color: @headerGreyDark;
-//    }
-//    body.nav-mapping & .nav > li.nav-mapping > a {
-//        background-color: @headerGreyDark;
-//    }
-//    body.nav-datasets & .nav > li.nav-datasets > a {
-//        background-color: @headerGreyDark;
-//    }
-//    body.nav-blogs & .nav > li.nav-blogs > a {
-//        background-color: @headerGreyDark;
-//    }
-//    body.nav-getinvolved & .nav > li.nav-getinvolved > a {
-//        background-color: @headerGreyDark;
-//    }
-//    body.nav-about & .nav > li.nav-about > a {
-//        background-color: @headerGreyDark;
-//    }
-//
-//    .dropdown-menu {
-//        color: @white;
-//        background-color: @alaOrange;
-//        a {
-//            color: @white;
-//            background-color: @alaOrange;
-//            //text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
-//            &:hover {
-//                background-color: @headerGreyDark;
-//                background-image: none;
-//                //text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
-//            }
-//        }
-//    }
-//    .dropdown-menu:before,
-//    .dropdown-menu:after {
-//        display: none;
-//    }
-//    .caret {
-//        border-top-color: white !important;
-//        border-bottom-color: white !important;
-//    }
-//}
-
-// body class to set active tab in menu
-//body[class*='nav-'] .nav > li[class*='nav-'] > a {
-    //background-color: @headerGreyDark;
-//}
-
-// ALA footer
-// ----------
-//footer {
-//    margin-top: 20px;
-//    background-color: @footerBackground;
-//    border-top: 1px solid @footerBorder;
-//    font-size: 12px;
-//    line-height: 1.6em;
-//    color: @headerGreyDark;
-//    a {
-//        font-size: 12px;
-//        color: @headerGreyDark;
-//        &:hover {
-//            color: darken(@alaOrange, 10%);
-//            text-decoration: none;
-//        }
-//    }
-//    > div {
-//        border-bottom: 1px solid #d1d1d1;
-//    }
-//    #top-row {
-//        padding-bottom: 0;
-//        background-color: @footerBackgroundDark;
-//        font-family: Arial, sans-serif;
-//        font-size: 14px;
-//        .row-fluid {
-//            padding-bottom: 0px;
-//        }
-//        a { //font-weight: bold;
-//            font-size: 14px;
-//        }
-//    }
-//    #row-2 {
-//        padding-bottom: 10px;
-//    }
-//    #row-3 {
-//        padding-top: 10px;
-//        padding-bottom: 20px;
-//        a {
-//            text-decoration: underline;
-//        }
-//        img {
-//            padding-right: 10px;
-//        }
-//    }
-//    .row-fluid {
-//        padding-top: 10px;
-//        padding-bottom: 10px;
-//        .columnTitle {
-//            font-weight: bold;
-//            font-size: 12px;
-//            padding-bottom: 5px;
-//        }
-//    }
-//}
 
 /* Grails generated overrides */
 
@@ -306,10 +128,6 @@ h4 { font-size: @baseFontSize * 1.25; }
     }
 }
 
-#main-content {
-    //margin-bottom: 20px;
-}
-
 div.ac_results {
     margin-left:10px;
     margin-right: -20px;
@@ -351,50 +169,5 @@ div.ac_results {
 @media (max-width: 979px) {
     .well {
         .well-small;
-    }
-//    #nav-site .navbar-inner {
-//        min-height: 3px !important;
-//        .btn-navbar {
-//            margin-top: 12px;
-//        }
-//        .nav > li > a {
-//            padding: 7px 10px !important;
-//        }
-//        .navbar-form {
-//            margin-left: 0 !important;
-//        }
-//        input#search-2011 {
-//            display: inline-block;
-//            width: 85%;
-//        }
-//    }
-}
-
-@media (max-width: 767px) {
-    footer {
-        margin-left: -20px;
-        margin-right: -20px;
-        .row-fluid {
-            padding: 0;
-        }
-        .span2 {
-            padding: 10px 0;
-            border-bottom: 1px solid @footerBorder;;
-            a {
-                padding-left: 20px;
-            }
-        }
-    }
-}
-
-@media (min-width: 200px) and (max-width: 480px){
-    #site-header .navbar-inner #search-2013 {
-        width:160px;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 490px){
-    #site-header .navbar-inner #search-2013 {
-        width:200px;
     }
 }
