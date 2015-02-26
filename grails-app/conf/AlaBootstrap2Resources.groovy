@@ -1,16 +1,16 @@
 modules = {
     bootstrap {
         dependsOn 'core'
-        resource url:[plugin: 'ala-bootstrap2', dir: 'js',file:'bootstrap.js']
-        resource url:[plugin: 'ala-bootstrap2', dir: 'css',file:'bootstrap.css'], attrs:[media:'screen, projection, print']
-        resource url:[plugin: 'ala-bootstrap2', dir: 'css',file:'bootstrap-responsive.css'], attrs:[media:'screen, projection, print']
-        resource url:[plugin: 'ala-bootstrap2', dir:'css',file:'ala-styles.css']
+        resource url:'http://www2.ala.org.au/commonui-bs2/css/bootstrap.min.css'
+        resource url:'http://www2.ala.org.au/commonui-bs2/css/bootstrap-responsive.min.css'
+        resource url:'http://www2.ala.org.au/commonui-bs2/css/ala-styles.css'
+        resource url:'http://www2.ala.org.au/commonui-bs2/js/bootstrap.js'
     }
 
     core {
         dependsOn 'jquery', 'autocomplete'
         resource url:[plugin: 'ala-bootstrap2', dir: 'js',file:'html5.js'], wrapper: { s -> "<!--[if lt IE 9]>$s<![endif]-->" }
-        resource url:[plugin: 'ala-bootstrap2', dir: 'js',file:'application.js']
+        resource url:'http://www2.ala.org.au/commonui-bs2/js/application.js'
     }
 
     autocomplete {
