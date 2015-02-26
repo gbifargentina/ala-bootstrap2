@@ -2,7 +2,7 @@
 
 ## Usage
 ```
-runtime ":ala-bootstrap2:2.0-SNAPSHOT"
+runtime ":ala-bootstrap2:2.0"
 ```
 
 ## Description
