@@ -18,7 +18,7 @@ class HeaderFooterTagLib {
     def bieBaseURL = Holders.config.bie.baseURL ?: "http://bie.ala.org.au"
     def grailServerURL = Holders.config.grails.serverURL ?: "http://bie.ala.org.au"
     def bieSearchPath = Holders.config.bie.searchPath ?: "/search"
-    def headerAndFooterBaseURL = Holders.config.headerAndFooter.baseURL ?:  "http://www2.ala.org.au/commonui-bs2"
+    def headerAndFooterBaseURL = Holders.config.headerAndFooter.baseURL ?: "http://www2.ala.org.au/commonui-bs2"
     // the next two can also be overridden by tag attributes
     def casLoginUrl = Holders.config.security.cas.loginUrl ?: "https://auth.ala.org.au/cas/login"
     def casLogoutUrl = Holders.config.security.cas.logoutUrl ?: "https://auth.ala.org.au/cas/logout"
