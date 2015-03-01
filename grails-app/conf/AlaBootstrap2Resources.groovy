@@ -1,9 +1,9 @@
 modules = {
     bootstrap {
-        dependsOn 'core'
-        resource url:'http://www2.ala.org.au/commonui-bs2/css/bootstrap.min.css'
-        resource url:'http://www2.ala.org.au/commonui-bs2/css/bootstrap-responsive.min.css'
-        resource url:'http://www2.ala.org.au/commonui-bs2/css/ala-styles.css'
+        dependsOn 'core', 'font-awesome'
+        resource url:'http://www2.ala.org.au/commonui-bs2/css/bootstrap.min.css', attrs:[media:'all']
+        resource url:'http://www2.ala.org.au/commonui-bs2/css/bootstrap-responsive.min.css', attrs:[media:'all']
+        resource url:'http://www2.ala.org.au/commonui-bs2/css/ala-styles.css', attrs:[media:'all']
         resource url:'http://www2.ala.org.au/commonui-bs2/js/bootstrap.js'
     }
 
@@ -18,7 +18,7 @@ modules = {
         dependsOn 'jquery-migration'
         // Important note!!: To use this component along side jQuery UI, you need to download a custom jQuery UI compilation that
         // do not include the autocommplete widget
-        resource url:[plugin: 'ala-bootstrap2', dir: 'css',file:'jquery.autocomplete.css']
+        resource url:[plugin: 'ala-bootstrap2', dir: 'css',file:'jquery.autocomplete.css'], attrs:[media:'all']
         resource url:[plugin: 'ala-bootstrap2', dir: 'js',file:'jquery.autocomplete.js']
     }
 
@@ -26,6 +26,10 @@ modules = {
         // Needed to support legacy js components that do not work with latest versions of jQuery
         dependsOn 'jquery'
         resource url:[plugin: 'ala-bootstrap2', dir: 'js',file:'jquery-migrate-1.2.1.min.js']
+    }
+
+    'font-awesome' {
+        resource url:[plugin: 'ala-bootstrap2', dir: 'css', file: 'font-awesome-4.3.0.css'], attrs:[media:'all']
     }
 
 }
