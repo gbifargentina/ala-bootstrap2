@@ -1,16 +1,19 @@
+
+def alaBaseUrl = "https://www.ala.org.au"
+
 modules = {
     bootstrap {
         dependsOn 'core', 'font-awesome'
-        resource url:'http://www2.ala.org.au/commonui-bs2/css/bootstrap.min.css', attrs:[media:'all']
-        resource url:'http://www2.ala.org.au/commonui-bs2/css/bootstrap-responsive.min.css', attrs:[media:'all']
-        resource url:'http://www2.ala.org.au/commonui-bs2/css/ala-styles.css', attrs:[media:'all']
-        resource url:'http://www2.ala.org.au/commonui-bs2/js/bootstrap.js'
+        resource url:alaBaseUrl + '/commonui-bs2/css/bootstrap.min.css', attrs:[media:'all']
+        resource url:alaBaseUrl + '/commonui-bs2/css/bootstrap-responsive.min.css', attrs:[media:'all']
+        resource url:alaBaseUrl + '/commonui-bs2/css/ala-styles.css', attrs:[media:'all']
+        resource url:alaBaseUrl + '/commonui-bs2/js/bootstrap.js'
     }
 
     core {
         dependsOn 'jquery', 'autocomplete'
         resource url:[plugin: 'ala-bootstrap2', dir: 'js',file:'html5.js'], wrapper: { s -> "<!--[if lt IE 9]>$s<![endif]-->" }
-        resource url:'http://www2.ala.org.au/commonui-bs2/js/application.js'
+        resource url:alaBaseUrl + '/commonui-bs2/js/application.js'
     }
 
     autocomplete {
