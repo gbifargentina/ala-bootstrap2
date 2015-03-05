@@ -49,8 +49,18 @@
                     </li>
                 </ul>
                 <ul class="nav pull-right">
-					<li ><a href="http://auth.ala.org.au/userdetails/myprofile">My profile</a></li>
-                    <li >::loginLogoutListItem::</li>
+                    <li class="dropdown font-xsmall">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            User settings
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="http://auth.ala.org.au/userdetails/myprofile">My profile</a></li>
+                            <li class="divider"></li>
+                            <li>::loginLogoutListItem::</li>
+                            <li><a href="https://auth.ala.org.au/userdetails/registration/createAccount">Register</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <form class="navbar-form" role="search" action="http://bie.ala.org.au/search" method="get">
                     <input type="text" class="general-search ac_input form-control" name="q" placeholder="Search the Atlas">
