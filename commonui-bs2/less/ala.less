@@ -1,0 +1,236 @@
+// Global values
+// -----------------------------
+@offWhite: #fffef7;
+@alaOrange: #F26649;
+@alaOrangeDark: #F26649;
+
+@mainBrandColor: #f26649;
+
+@headerGrey: #3D464B;
+@headerGreyLight: #353D42;
+@headerGreyDark: #333a3f;
+
+@baseFontSize: 13px;
+
+// Scaffolding
+// -------------------------------
+@bodyBackground: #f2f2f2;
+@textColor: #637073;
+@linkColor: #C44D34;
+@linkColorHover: #da644e;
+@baseBorderRadius: 0px;
+@borderRadiusLarge: 0px;
+@borderRadiusSmall: 0px;
+
+// Buttons
+@btnBackground:                     @white;
+@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBorder:                         #ccc;
+
+@btnPrimaryBackground:              lighten(@alaOrange, 3%);
+@btnPrimaryBackgroundHighlight:     darken(@alaOrange, 3%);
+
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        darken(#5bc0de, 6%);
+
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     darken(#62c462, 6%);
+
+@btnWarningBackground:              #fbb450;
+@btnWarningBackgroundHighlight:     darken(#fbb450, 6%);
+
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      darken(#ee5f5b, 6%);
+
+@btnInverseBackground:              @grayDarker;
+@btnInverseBackgroundHighlight:     darken(@grayDarker, 6%);
+
+// footer
+
+@footerBackground: @white;
+@footerBackgroundDark: @white;
+@footerBorder: #d1d1d1;
+
+@sansFontFamily: Roboto,Helvetica,"Helvetica Neue",Arial,sans-serif;
+@baseFontSize: 14px;
+
+@dropdownBackground: #f4f4f4;
+@dropdownLinkColor: @gray;
+@dropdownLinkColorHover: @gray;
+@dropdownLinkColorActive: @white;
+@dropdownLinkBackgroundActive: @white;
+@dropdownLinkBackgroundHover: @dropdownLinkBackgroundActive;
+
+//
+// Overrides for Bootstrap
+// -------------------------------
+
+body {
+    padding-top: 70px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 200;
+}
+
+h1 { font-size: @baseFontSize * 2.00; }
+h2 { font-size: @baseFontSize * 1.75; }
+h3 { font-size: @baseFontSize * 1.50; }
+h4 { font-size: @baseFontSize * 1.25; }
+
+.nav > li > a:hover {
+    text-decoration: none;
+    background-color: darken(@wellBackground, 10%);
+}
+
+.breadcrumb {
+    background-color: inherit;
+    margin: 0 0 20px 0;
+    padding: 0;
+    > li {
+        > .divider {
+            color: @gray;
+        }
+    }
+    > .active {
+        color: @gray;
+    }
+}
+
+// ALA orange button. Usage: <foo class="btn btn-ala"/>
+.btn-ala {
+    .buttonBackground(@alaOrange, @alaOrange);
+}
+
+// Sprite icons path
+// -------------------------
+@iconSpritePath: "../images/glyphicons-halflings.png";
+@iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+// common rules
+.orange-nav-bar {
+    background-color: @alaOrange;
+    border-left: 1px solid @alaOrange;
+    border-right: 1px solid @alaOrange;
+    border-collapse: collapse;
+    color: @white;
+    .box-shadow(none);
+    text-shadow: none;
+    font-size: 14px;
+}
+
+/* Grails generated overrides */
+
+.custom-sprite (@offset) {
+    content: " ";
+    padding-left: 5px;
+    background: url("@{iconSpritePath}");
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    margin-top: 1px;
+    background-position: @offset;
+}
+
+#main div.nav { // Grails breadcrumb
+    ul {
+        .breadcrumb;
+        li {
+            a {
+                margin-right: 20px;
+                &.home:before {
+                    .custom-sprite (0 -24px);
+                }
+                &.create:before {
+                    .custom-sprite (0 -72px);
+                }
+                &.list:before {
+                    .custom-sprite (-360px -48px);
+                }
+            }
+        }
+    }
+}
+
+// skip to content links not needed in our app
+.skip {
+    display: none;
+}
+
+// scaffold generated tables
+.scaffold-list table {
+    .table;
+    .table-striped;
+    .table-bordered;
+    .table-hover;
+}
+
+// Adapted from grails CSS
+.property-list {
+    margin: 0.6em 1.25em 0 1.25em;
+    padding: 0.3em 1.8em 1.25em;
+    position: relative;
+    zoom: 1;
+    border: none;
+
+    .fieldcontain {
+        list-style: none;
+        overflow: hidden;
+        zoom: 1;
+        margin-top: 1em;
+        .property-label {
+            float: left;
+            text-align: right;
+            width: 25%;
+        }
+        .property-value {
+            display: block;
+            margin-left: 27%;
+        }
+    }
+}
+
+div.ac_results {
+    margin-left:10px;
+    margin-right: -20px;
+}
+
+.content, #content, #main {
+    // form buttons
+    .edit, .delete, .save {
+        .btn;
+    }
+    // pagination
+    div.pagination {
+        width: 100%;
+        text-align: center;
+        .btn-group;
+        span, a {
+            .btn;
+            .btn-small;
+            margin-right: 5px;
+            &.currentStep {
+                .disabled;
+                .btn-inverse;
+            }
+            &.nextLink:after {
+                font-size: 16px;
+                content: "\00bb";
+                padding-left: 5px;
+            }
+            &.prevLink:before {
+                font-size: 16px;
+                content: "\00ab";
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+// Mobile & tablet specific styling
+@media (max-width: 979px) {
+    .well {
+        .well-small;
+    }
+}

@@ -6,6 +6,7 @@ jdk:
 branches:
   only:
   - master
+  - 2015-design
 
 before_install:
 - export TZ=Australia/Canberra

@@ -18,7 +18,7 @@ class HeaderFooterTagLib {
     def bieBaseURL = Holders.config.bie.baseURL ?: "http://bie.ala.org.au"
     def grailServerURL = Holders.config.grails.serverURL ?: "http://bie.ala.org.au"
     def bieSearchPath = Holders.config.bie.searchPath ?: "/search"
-    def headerAndFooterBaseURL = Holders.config.headerAndFooter.baseURL ?: "http://www2.ala.org.au/commonui"
+    def headerAndFooterBaseURL = Holders.config.headerAndFooter.baseURL ?: "http://www2.ala.org.au/commonui-bs2"
     // the next two can also be overridden by tag attributes
     def casLoginUrl = Holders.config.security.cas.loginUrl ?: "https://auth.ala.org.au/cas/login"
     def casLogoutUrl = Holders.config.security.cas.logoutUrl ?: "https://auth.ala.org.au/cas/logout"
@@ -40,7 +40,7 @@ class HeaderFooterTagLib {
      * @attr fluidLayout - if true the BS CSS class of "container" is changed to "container-fluid"
      */
     def banner = { attrs ->
-        out << load('banner2', attrs)
+        out << load('banner', attrs)
     }
 
     /**
@@ -70,7 +70,7 @@ class HeaderFooterTagLib {
      * Cache for includes. Expires after 30mins or when clearCache is called.
      */
     def hfCache = [
-            banner2: [timestamp: new Date().time, content: ""],
+            banner: [timestamp: new Date().time, content: ""],
             menu: [timestamp: new Date().time, content: ""],
             footer: [timestamp: new Date().time, content: ""]]
 
@@ -79,7 +79,8 @@ class HeaderFooterTagLib {
      */
     def clearCache = {
         hfCache.each { key, obj -> hfCache[key].content = ""}
-        println "cache cleared"
+        log.warn "cache cleared"
+        out << "cache cleared"
     }
 
     /**
@@ -142,7 +143,7 @@ class HeaderFooterTagLib {
      * @return
      */
     String getContent(which) {
-        def url = headerAndFooterBaseURL + '/' + which + "-bs.html" // Bootstrap versions
+        def url = headerAndFooterBaseURL + '/' + which + ".html" // Bootstrap versions
         def conn = new URL(url).openConnection()
         try {
             conn.setConnectTimeout(10000)
@@ -165,6 +166,7 @@ class HeaderFooterTagLib {
      * @return
      */
     String transform(content, attrs) {
+        content = content.replaceAll(/::headerFooterServer::/, headerAndFooterBaseURL)
         content = content.replaceAll(/::centralServer::/, alaBaseURL)
         content = content.replaceAll(/::searchServer::/, bieBaseURL) // change for BIE to grailServerURL
         content = content.replaceAll(/::searchPath::/, bieSearchPath)

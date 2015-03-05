@@ -1,7 +1,8 @@
 // initialise plugins
 $(function(){
     // autocomplete on navbar search input
-    $("form#search-form-2011 input#search-2011, form#search-inpage input#search, input#search-2013").autocomplete('http://bie.ala.org.au/search/auto.jsonp', {
+    // autocomplete on navbar search input
+    $("input.general-search").autocomplete('http://bie.ala.org.au/ws/search/auto.jsonp', {
         extraParams: {limit: 100},
         dataType: 'jsonp',
         parse: function(data) {

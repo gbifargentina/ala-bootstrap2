@@ -17,38 +17,22 @@
     <r:layoutResources/>
     <g:layoutHead />
 </head>
-<body class="${pageProperty(name:'body.class')?:'nav-datasets'}" id="${pageProperty(name:'body.id')}" onload="${pageProperty(name:'body.onload')}">
+<body class="${pageProperty(name:'body.class')}" id="${pageProperty(name:'body.id')}" onload="${pageProperty(name:'body.onload')}">
 <g:set var="fluidLayout" value="${pageProperty(name:'meta.fluidLayout')?:grailsApplication.config.skin?.fluidLayout}"/>
-<hf:banner logoutUrl="${g.createLink(controller:"logout", action:"logout", absolute: true)}" fluidLayout="${fluidLayout}"/>
+<g:set var="containerType" value="${fluidLayout ? 'container-fluid' : 'container'}"/>
 
-<hf:menu fluidLayout="${fluidLayout}"/>
+<!-- Header -->
+<hf:banner logoutUrl="${g.createLink(controller:"logout", action:"logout", absolute: true)}" />
+<!-- End header -->
 
-<div class="${fluidLayout?'container-fluid':'container'}" id="main-content">
+<!-- Container -->
+<div class="${containerType}" id="main">
     <g:layoutBody />
-</div><!--/.container-->
+</div><!-- End container #main  -->
 
-<div class="${fluidLayout?'container-fluid':'container'} hidden-desktop">
-    <%-- Borrowed from http://marcusasplund.com/optout/ --%>
-    <a class="btn btn-small toggleResponsive"><i class="icon-resize-full"></i> <span>Desktop</span> version</a>
-</div>
-
+<!-- Footer -->
 <hf:footer/>
-
-<script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<r:script>
-    var pageTracker = _gat._getTracker("UA-4355440-1");
-    pageTracker._initData();
-    pageTracker._trackPageview();
-
-    // show warning if using IE6
-    if ($.browser && $.browser.msie && $.browser.version.slice(0,1) == '6') {
-        $('#header').prepend($('<div style="text-align:center;color:red;">WARNING: This page is not compatible with IE6.' +
-                ' Many functions will still work but layout and image transparency will be disrupted.</div>'));
-    }
-</r:script>
+<!-- End footer -->
 
 <!-- JS resources-->
 <r:layoutResources/>
