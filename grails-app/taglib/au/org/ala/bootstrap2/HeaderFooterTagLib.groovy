@@ -79,7 +79,8 @@ class HeaderFooterTagLib {
      */
     def clearCache = {
         hfCache.each { key, obj -> hfCache[key].content = ""}
-        println "cache cleared"
+        log.warn "cache cleared"
+        out << "cache cleared"
     }
 
     /**
