@@ -2,7 +2,7 @@
 
 ## Usage
 ```
-runtime ":ala-bootstrap2:2.0"
+runtime ":ala-bootstrap2:2.2"
 ```
 
 ## Description
@@ -38,6 +38,12 @@ runtime ':resources:1.2.14'
 If you are using **Grails 2.4.x** make sure you disable the asset-pipeline plugin.
 
 ## Changelog
+- **Version 2.2** (06/03/2015)
+  - CSS fixes, added controller method to clear cache, fix for pagination in mobile display
+- **Version 2.1** (02/03/2015)
+  - UI/CSS fixes, HPPS support for external resources, Font-Awesome added back
+- **Version 2.0** (26/02/2015)
+  - First version for new 2015 design skin.
 - **Version 1.4** (24/02/2015)
   - This version, unlike 1.3, truly excludes the servlet-api dependency from being resolve as a dependency in the host app
 - **Version 1.3** (18/02/2015)
