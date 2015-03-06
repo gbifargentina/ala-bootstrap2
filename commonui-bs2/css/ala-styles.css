@@ -3,7 +3,7 @@
 
 body{background-color: white;}
 
-.container#main{margin-bottom: 4em; margin-top: 10px;}
+.container#main, .container-fluid#main {margin-bottom: 4em;}
 
 /* Typography
 ================================= */
@@ -112,6 +112,8 @@ img.ncris{margin-top:8px;}
     .navbar-fixed-top .navbar-inner { padding: 0;}
     .navbar-fixed-top, .navbar-fixed-bottom { position: fixed; right: 0; left: 0;z-index: 1030;}
     .navbar-inner .nav-collapse.in.collapse .navbar-form .general-search { width: 170px; }
+    #main div.pagination .step {display:none;}
+    #main div.pagination .step:nth-child(-n+3), #main div.pagination .step:nth-last-child(2) {display:inline-block;}
 }
 
 /* Extra Small Devices, Phones */
@@ -133,6 +135,7 @@ img.ncris{margin-top:8px;}
     .navbar-inner ul.nav {margin: 0;}
     .navbar-inner ul.nav > li > a {padding: 10px;}
     p.lead {font-size: 24px;}
+    #main div.pagination .step {display:inline-block;}
 }
 
 /* Medium Devices, Desktops */
