@@ -1,6 +1,6 @@
 class AlaBootstrap2GrailsPlugin {
     // the plugin version
-    def version = "1.5-SNAPSHOT"
+    def version = "2.2"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.2 > *"
     // resources that are excluded from plugin packaging
@@ -10,10 +10,10 @@ class AlaBootstrap2GrailsPlugin {
 
     // TODO Fill in these fields
     def title = "Ala Bootstrap2 Plugin" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author ="Atlas of Living Australia"
+    def authorEmail = "info@ala.org.au"
     def description = '''\
-Brief summary/description of the plugin.
+Plugin to provide the ALA footer and header skin to an app.
 '''
 
     // URL to the plugin's documentation
@@ -28,7 +28,7 @@ Brief summary/description of the plugin.
     def organization = [ name: "Atlas of Living Australia", url: "http://www.ala.org.au/" ]
 
     // Any additional developers beyond the author specified above.
-    def developers = [ [ name: "Angel Ruiz", email: "aruizca@gmail.com" ]]
+    def developers = [ [ name: "Angel Ruiz", email: "aruizca@gmail.com" ], [ name: "Nick dos Remedios", email: "nickdos@gmail.com" ]]
 
     // Location of the plugin's issue tracker.
     def issueManagement = [ system: "GitHub", url: "https://github.com/AtlasOfLivingAustralia/ala-bootstrap2/issues" ]
