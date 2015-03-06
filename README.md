@@ -41,7 +41,7 @@ If you are using **Grails 2.4.x** make sure you disable the asset-pipeline plugi
 - **Version 2.2** (06/03/2015)
   - CSS fixes, added controller method to clear cache, fix for pagination in mobile display
 - **Version 2.1** (02/03/2015)
-  - UI/CSS fixes, HPPS support for external resources, Font-Awesome added back
+  - UI/CSS fixes, HTTPS support for external resources, Font-Awesome added back
 - **Version 2.0** (26/02/2015)
   - First version for new 2015 design skin.
 - **Version 1.4** (24/02/2015)
