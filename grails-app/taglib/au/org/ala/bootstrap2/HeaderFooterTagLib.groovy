@@ -61,7 +61,7 @@ class HeaderFooterTagLib {
     /**
      * Displays the page footer.
      *
-     * Usage: <hf:footer/>
+     * Usage: <hf:head/>
      */
     def head = {
         out << load('head', [:])
