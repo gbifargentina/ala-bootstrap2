@@ -1,6 +1,6 @@
 class AlaBootstrap2GrailsPlugin {
     // the plugin version
-    def version = "2.3"
+    def version = "2.4-SNAPSHOT"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.2 > *"
     // resources that are excluded from plugin packaging
@@ -41,7 +41,11 @@ Plugin to provide the ALA footer and header skin to an app.
     }
 
     def doWithSpring = {
-        // TODO Implement runtime spring config (optional)
+        // add default value for config.headerAndFooter.baseURL that can be overridden by client app
+        def buildProps = new Properties()
+        buildProps.setProperty("headerAndFooter.baseURL","https://www.ala.org.au/commonui-bs2")
+        def configSlurper = new ConfigSlurper().parse(buildProps)
+        application.config = configSlurper.merge(application.config)
     }
 
     def doWithDynamicMethods = { ctx ->
