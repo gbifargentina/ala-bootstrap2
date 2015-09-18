@@ -90,6 +90,10 @@ img.aus-govt{margin-top: 20px;}
 img.gbif,img.csiro{max-width:100px;padding-top:15px;}
 img.ncris{margin-top:8px;}
 
+/* Bootstrap overrides to fix minor issues
+================================= */
+/*  Fix for BS white text in menu which is not readable on registration page */
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {color:#5f5d60;}
 
 /* Media Queries (Mobile First Method = only add rules to modify larger views)
 ================================= */
