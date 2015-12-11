@@ -14,7 +14,7 @@ class HeaderFooterTagLib {
      * The banner include assumes that ala-cas-client exists in the app library.
      */
 
-    def alaBaseURL = Holders.config.ala.baseURL ?: "http://www.ala.org.au"
+    def alaBaseURL = Holders.config.ala.baseURL ?: "https://www.ala.org.au"
     def bieBaseURL = Holders.config.bie.baseURL ?: "http://bie.ala.org.au"
     def grailServerURL = Holders.config.grails.serverURL ?: "http://bie.ala.org.au"
     def bieSearchPath = Holders.config.bie.searchPath ?: "/search"
