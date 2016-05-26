@@ -1,6 +1,6 @@
 class AlaBootstrap2GrailsPlugin {
     // the plugin version
-    def version = "2.4.1"
+    def version = "2.4.2-SNAPSHOT"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.2 > *"
     // resources that are excluded from plugin packaging
