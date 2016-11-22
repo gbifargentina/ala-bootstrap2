@@ -27,6 +27,9 @@
 
 <!-- Container -->
 <div class="${containerType}" id="main">
+    <plugin:isAvailable name="alaAdminPlugin">
+        <ala:systemMessage/>
+    </plugin:isAvailable>
     <g:layoutBody />
 </div><!-- End container #main  -->
 
