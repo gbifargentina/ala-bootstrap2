@@ -1,91 +1,118 @@
-<!-- Navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="::centralServer::">
-                <img alt="brand" class="brand img-responsive" src="::headerFooterServer::/images/supporting-graphic-element-flat.png">
-            </a>
-            <a class="brand" href="::centralServer::">
-                Atlas Of Living Australia
-            </a>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                  <!--  <li>
-						<a href="http://www.ala.org.au/about-the-atlas/contact-us/">Contact us</a>
-                    </li>
-                    <li>
-						<a href="http://www.ala.org.au/get-involved/">Get involved</a>
-          </li>-->
-                    <li class="dropdown font-xsmall">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            ALA Apps
-                            <span class="caret"></span>
-                        </a>
-						<ul class="dropdown-menu" role="menu">
-	                        <li><a href="http://spatial.ala.org.au">Spatial portal</a></li>
-	                        <li ><a href="http://biocache.ala.org.au">Occurrence search</a></li>
-	                        <li ><a href="http://fish.ala.org.au">Fish map</a></li>
-	                        <li ><a href="http://regions.ala.org.au">Regions</a></li>
-	                        <li ><a href="http://biocache.ala.org.au/explore/your-area">Explore your area</a></li>
+<!-- Navbar start -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container container-navbar">
+      <div class="navbar-header">
+        <button type="button" class="btn btn-navbar nav-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="::centralServer::/">
+          <img alt="Brand" src="::headerFooterServer::/images/ala-logo-2016-inline.png">
+        </a>
+      </div>
 
-	                        <li class="divider"></li>
-	                        <li><a href="http://sightings.ala.org.au">Record a sighting</a></li>
-	                        <li><a href="http://collections.ala.org.au">Collections</a></li>
-                          <li><a href="http://www.ala.org.au/biocollect/">Biocollect</a></li>
-	                        <li><a href="http://volunteer.ala.org.au">DigiVol</a></li>
-	                        <li><a href="http://fieldcapture.ala.org.au/merit">MERIT</a></li>
-	                        <li><a href="http://www.soils2satellites.org.au/">Soils to satellite</a></li>
-	                        <li><a href="http://lists.ala.org.au">Traits, species lists</a></li>
-                          <li><a href="http://phylolink.ala.org.au/">Phylolink</a></li>
+      <div class="collapse nav-collapse" id="bs-example-navbar-collapse-1">
+        <div class="row-fluid row-search">
+          <div class="span6">
+            <form id="global-search" class="banner" action="::searchServer::::searchPath::" method="get" name="search-form">
+              <div class="search-form-icon">
+              <label for="biesearch" rel="tooltip" title="search"><img src="::headerFooterServer::/images/icon-search.png" height="16" width="16" alt="Search" /></label>
+                <input type="text" placeholder="Search the Atlas ..." class="form-control autocomplete" id="biesearch" name="q">
+                
+              </div>
+            </form>
+          </div>
 
-	                        <li class="divider"></li>
-	                        <li><a href="http://root.ala.org.au">Community portals</a></li>
-	                        <li><a href="http://dashboard.ala.org.au">Dashboard</a></li>
-	                        <li><a href="http://collections.ala.org.au/datasets">Datasets browser</a></li>
-	                    </ul>
-                    </li>
-                    <li class="dropdown font-xsmall">
+          <div class="span2 visible-desktop">
+            <ul class="nav navbar-nav navbar-right nav-logged-in">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  My profile
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="https://auth.ala.org.au/userdetails/myprofile/">View profile</a></li>
+                  <li><a href="https://auth.ala.org.au/userdetails/registration/editAccount">Account settings</a></li>
+                  <li class="divider"></li>
+                  <li>::loginLogoutListItem::</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div><!-- End row -->
+
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              ALA Info
+              Start exploring
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="::centralServer::/about-the-atlas/">About the Atlas</a></li>
-              <li><a href="::centralServer::/get-involved/">Get Involved</a></li>
-
+              <li><a href="https://lists.ala.org.au/iconic-species">Australian iconic species</a></li>
+              <li><a href="https://biocache.ala.org.au/explore/your-area">Explore your area</a></li>
+              <li><a href="http://regions.ala.org.au/">Explore your region</a></li>
+              <li><a href="https://biocache.ala.org.au/search">Search occurrence records</a></li>
               <li class="divider"></li>
-              <li><a href="::centralServer::/education-resources/">Education Resources</a></li>
-
-              <li class="divider"></li>
-              <li><a href="::centralServer::/about-the-atlas/contact-us/">Contact Us</a></li>
-              <!--<li><a href="#">Provide Feedback</a></li>-->
+              <li><a href="::centralServer::/sites-and-services/">Sites &amp; services</a></li>
             </ul>
           </li>
-                </ul>
-                <ul class="nav pull-right">
-                    <li class="dropdown font-xsmall">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            User settings
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="http://auth.ala.org.au/userdetails/myprofile">My profile</a></li>
-                            <li class="divider"></li>
-                            <li>::loginLogoutListItem::</li>
-                            <li><a href="https://auth.ala.org.au/userdetails/registration/createAccount">Register</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form" role="search" action="http://bie.ala.org.au/search" method="get">
-                    <input type="text" class="general-search ac_input form-control" name="q" placeholder="Search the Atlas">
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </form>
-            </div><!-- /.nav-collapse -->
-        </div><!-- /.container -->
-    </div><!-- /.navbar-inner -->
-</div><!-- /.navbar -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Search &amp; analyse
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://collections.ala.org.au/">Browse natural history collections</a></li>
+              <li><a href="http://collections.ala.org.au/datasets">Search collections datasets</a></li>
+              <li><a href="https://downloads.ala.org.au">Download datasets</a>
+              <li><a href="https://spatial.ala.org.au/">Spatial portal</a></li>
+              <li class="divider"></li>
+              <li><a href="https://dashboard.ala.org.au/">ALA dashboard</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Participate
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://biocollect.ala.org.au/">Join a Citizen Science project</a></li>
+              <li><a href="https://sightings.ala.org.au/">Record a sighting in the ALA</a></li>
+              <li><a href="::centralServer::/get-involved/upload-data-sets/">Submit a dataset to the ALA</a></li>
+              <li><a href="https://digivol.ala.org.au/">Digitise a record in DigiVol</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Learn about the ALA
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="::centralServer::/about-the-atlas/">Who we are</a></li>
+              <li class="divider"></li>
+              <li><a href="::centralServer::/how-to-use/">How to use the ALA</a></li>
+              <li><a href="::centralServer::/how-to-work-with-data/">How to work with data</a></li>
+              <li><a href="::centralServer::/about-the-atlas/terms-of-use/citing-the-atlas/">How to cite the ALA</a></li>
+              <li class="divider"></li>
+              <li><a href="::centralServer::/education-resources/">Education resources</a></li>
+              <li><a href="::centralServer::/ala-and-indigenous-ecological-knowledge-iek/">Indigenous Ecological Knowledge</a></li>
+              <li class="divider"></li>
+              <li><a href="::centralServer::/blogs-news/">ALA News</a></li>
+              <li class="divider"></li>
+              <li><a href="::centralServer::/about-the-atlas/contact-us/">Contact us</a></li>
+              <li><a href="::centralServer::/about-the-atlas/feedback-form/">Feedback form</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right hidden-desktop">
+          <li><a href="https://auth.ala.org.au/userdetails/myprofile/"><span class="nav-login">View profile</span></a></li>
+          <li><a href="https://auth.ala.org.au/userdetails/registration/editAccount"><span class="nav-login">Account settings</span></a></li>
+          <li>::loginLogoutListItem::</li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- End Navbar -->
+
+<div class="container-fluid ala-contentspacer"><div class="row-fluid"><div class="span12"></div></div></div>
