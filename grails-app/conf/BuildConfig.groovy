@@ -23,7 +23,7 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
-        compile ('au.org.ala:ala-cas-client:2.2') {
+        compile ('au.org.ala:ala-cas-client:2.3') {
             excludes([group: 'javax.servlet', name: 'servlet-api'])
         }
     }
