@@ -3,7 +3,9 @@
 
 body{background-color: white;}
 
-.container#main, .container-fluid#main {margin-bottom: 4em;position: relative;max-width: 1260px;}
+.container#main, .container-fluid#main {margin-bottom: 4em; position: relative; }
+.container#main { max-width: 1260px; }
+#main { margin: 25px 0 15px 0; }
 
 /* Typography
 ================================= */
