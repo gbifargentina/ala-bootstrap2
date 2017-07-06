@@ -52,7 +52,7 @@ strong{color:#5f5d60;}
 .navbar .btn-navbar {margin: 8px 15px;padding: 9px 10px;}
 .navbar .nav>li>a {text-shadow: none;}
 .ala-contentspacer {height: 74px;}
-.navbar .nav li.dropdown>.dropdown-toggle .caret {border-top-color: white;border-bottom-color: white;}
+/*.navbar .nav li.dropdown>.dropdown-toggle .caret {border-top-color: white;border-bottom-color: white;}*/ /* Removed so that menu carets show up. NdR */
 .navbar .nav li.dropdown.open>.dropdown-toggle .caret, .navbar .nav li.dropdown.active>.dropdown-toggle .caret, .navbar .nav li.dropdown.open.active>.dropdown-toggle .caret {border-top-color: white;border-bottom-color: white;}
 
 /* Nav Login
