@@ -126,7 +126,7 @@ section#breadcrumb {padding: 10px 0 15px 0;border-bottom: 1px solid #E7E7E7;back
 .breadcrumb-list {list-style: none;margin: 0 0 0 35px;padding: 0;}
 .breadcrumb-list li {display: inline-block;}
 .breadcrumb-list li a {color: #AF442E;}
-.breadcrumb-list li .icon {margin-right: 5px;color: #bbb;}
+.breadcrumb-list li .icon {margin-right: 5px;opacity:0.6;}
 
 /* Metrics
 ================================= */
