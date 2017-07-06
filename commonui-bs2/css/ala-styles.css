@@ -120,6 +120,14 @@ p.alert-text>a:hover {text-decoration: none;}
 .alert.alert-promotional a {color: #FFF6F5;text-decoration: underline;}
 .alert.alert-promotional p {margin-bottom: 0; font-size: 16px;}
 
+/* Breadcrumb
+================================= */
+section#breadcrumb {padding: 10px 0 15px 0;border-bottom: 1px solid #E7E7E7;background-color: #E7E7E7;}
+.breadcrumb-list {list-style: none;margin: 0 0 0 35px;padding: 0;}
+.breadcrumb-list li {display: inline-block;}
+.breadcrumb-list li a {color: #AF442E;}
+.breadcrumb-list li .glyphicon {margin-right: 5px;color: #bbb;}
+
 /* Metrics
 ================================= */
 
@@ -209,7 +217,7 @@ img.ncris{margin-top:8px;}
     .help-text {margin-top: 0;}
     .navbar-inner ul.nav > li > a {padding: 15px 10px;}
     #global-search #biesearch {width: 400px;}
-    .ala-contentspacer {height: 47px;}
+    .ala-contentspacer {height: 46px;}
 }
 
 @media only screen and (min-width : 1200px) {
