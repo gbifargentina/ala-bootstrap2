@@ -24,7 +24,24 @@
 <!-- Header -->
 <hf:banner logoutUrl="${g.createLink(controller:"logout", action:"logout", absolute: true)}" />
 <!-- End header -->
-
+<!-- Breadcrumb -->
+<g:if test="${pageProperty(name:'meta.breadcrumb')}">
+    <section id="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <ul class="breadcrumb-list">
+                    <li><a href="/">Home</a></li>
+                    <g:if test="${pageProperty(name:'meta.breadcrumbParent')}">
+                        <g:set value="${pageProperty(name:'meta.breadcrumbParent').tokenize(',')}" var="parentArray"/>
+                        <li><i class="icon icon-chevron-right"></i><a href="${parentArray[0]}">${parentArray[1]}</a></li>
+                    </g:if>
+                    <li class="active"><i class="icon icon-chevron-right"></i>${pageProperty(name:'meta.breadcrumb')}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</g:if>
+<!-- End Breadcrumb -->
 <!-- Container -->
 <div class="${containerType}" id="main">
     <plugin:isAvailable name="alaAdminPlugin">
