@@ -7,6 +7,7 @@ branches:
   only:
   - master
   - 2015-design
+  - may2017redesign
 
 before_install:
 - wget -q https://raw.githubusercontent.com/AtlasOfLivingAustralia/travis-build-configuration/master/ala_common.sh
