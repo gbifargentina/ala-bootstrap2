@@ -8,8 +8,7 @@
     <meta name="author" content="${grailsApplication.config.skin?.orgNameLong?:'Atlas of Living Australia'}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><g:layoutTitle /></title>
-    <r:require modules="bootstrap"/>
-    <r:layoutResources/>
+    <g:render template="head" model="[assetPrefix: 'core', requireModule: 'bootstrap']" />
     <g:layoutHead />
     <hf:head />
 </head>
@@ -26,12 +25,7 @@
     <g:layoutBody />
 </div><!-- End container #main  -->
 
-<!-- Footer -->
-<hf:footer/>
-<!-- End footer -->
-
-<!-- JS resources-->
-<r:layoutResources/>
+<g:render template="/layouts/tail" model="[assetPrefix: 'core']" />
 
 </body>
 </html>

@@ -34,7 +34,7 @@ modules = {
     }
 
     'font-awesome' {
-        resource url:[plugin: 'ala-bootstrap2', dir: 'css', file: 'font-awesome-4.3.0.css'], attrs:[media:'all']
+        resource url:[plugin: 'ala-bootstrap2', dir: 'css', file: 'font-awesome-4.7.0.css'], attrs:[media:'all']
     }
 
 }
