@@ -94,6 +94,8 @@ img.ncris{margin-top:8px;}
 ================================= */
 /*  Fix for BS white text in menu which is not readable on registration page */
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {color:#5f5d60;}
+/* hide new skin breadcrumb in old CSS */
+section#breadcrumb {display: none;}
 
 /* Media Queries (Mobile First Method = only add rules to modify larger views)
 ================================= */
