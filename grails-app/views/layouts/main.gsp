@@ -11,10 +11,7 @@
 
     <title><g:layoutTitle /></title>
 
-    <%-- Do not include JS & CSS files here - add them to your app's "application" module (in "Configuration/ApplicationResources.groovy") --%>
-    <r:require modules="bootstrap, ala"/>
-
-    <r:layoutResources/>
+    <g:render template="/layouts/head" model="${[assetPrefix: 'ala', assetLinks: [[href: "${grailsApplication.config.headerAndFooter.baseURL}/css/ala-styles.css", media: 'all']], requireModule: 'ala']}" />
     <g:layoutHead />
 </head>
 <body class="${pageProperty(name:'body.class')}" id="${pageProperty(name:'body.id')}" onload="${pageProperty(name:'body.onload')}">
@@ -50,12 +47,7 @@
     <g:layoutBody />
 </div><!-- End container #main  -->
 
-<!-- Footer -->
-<hf:footer/>
-<!-- End footer -->
-
-<!-- JS resources-->
-<r:layoutResources/>
+<g:render template="/layouts/tail" model="[assetPrefix: 'ala']" />
 
 </body>
 </html>

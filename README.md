@@ -2,7 +2,10 @@
 
 ## Usage
 ```
-runtime ":ala-bootstrap2:2.4.2"
+runtime ":ala-bootstrap2:2.6.0-SNAPSHOT"
+// Then ensure at least one of resources or the asset pipeline plugin is included
+// compile ":resources:1.2.14"
+// compile ":asset-pipeline:2.14.1"
 ```
 
 ## Description
@@ -10,10 +13,16 @@ This is a Grails Plugin to provide the basic set of web resources to correctly a
 
 It provides the same layout as the latest available version of ala-web-theme but with the following differences:
 
-- **Deferred Javascript loading**: All javascript loading (including jquery) is now deferred to the bottom of the page as the default best practice.
+- **Deferred Javascript loading**: All javascript loading (excluding jquery) is now deferred to the bottom of the page as the default best practice.
 - **Newer JQuery library versions support **: We are not limited by just using version 1.7.x anymore. **Version 1.11.1** is provided by default, but you can use other version in your host app if you need to.
 - The [jquery-migrate library](https://github.com/jquery/jquery-migrate/) is now included by default to support legacy components like the autocomplete widget that appears in the search section of the main template.
 - All Single-Sign-On relevant code has been removed. This code is now hosted in the new [ala-auth plugin](https://github.com/AtlasOfLivingAustralia/ala-auth-plugin).
+
+**NOTE:** this plugin supports both the resources and asset-pipeline plugins.  If the resources plugin is present as a
+dependency then the `main` and `generic` layouts will use the resources plugin by default.  This means that to use the 
+asset-pipeline to include the plugin's bundles you must ensure that the resources plugin is not included as a transitive
+dependency by any other plugins.  Use `./grailsw dependency-report` to show the full dependency graph if you're unsure
+where the resources plugin is coming from.
 
 ## Upgrading from ala-web-theme
 
@@ -27,17 +36,10 @@ disposition: 'head'
 - If you want to use **JQuery UI** library, you will have to compile a custom distribution that excludes the **autocomplete** widget.
 - You will probably need to explicitly declare the dependency with the new [ala-auth plugin](https://github.com/AtlasOfLivingAustralia/ala-auth-plugin).
 
-## Included plugin dependencies
-This plugin relies heavily on the [resources plugin](http://grails.org/plugin/resources):
-```
-runtime ":jquery:1.11.1"
-runtime ':resources:1.2.14'
-```
-
-### Important!!
-If you are using **Grails 2.4.x** make sure you disable the asset-pipeline plugin.
-
 ## Changelog
+- **Version 2.6.0-SNAPSHOT** (10/07/2017)
+  - Add initial support for Asset Pipeline
+  - Resources plugin is no longer exported as a dependency
 - **Version 2.2** (06/03/2015)
   - CSS fixes, added controller method to clear cache, fix for pagination in mobile display
 - **Version 2.1** (02/03/2015)

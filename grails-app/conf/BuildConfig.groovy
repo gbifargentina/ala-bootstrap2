@@ -23,20 +23,20 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
-        compile ('au.org.ala:ala-cas-client:2.2') {
+        compile ('au.org.ala:ala-cas-client:2.3') {
             excludes([group: 'javax.servlet', name: 'servlet-api'])
         }
     }
 
     plugins {
 
-        build(":release:3.0.1",
-                ":rest-client-builder:2.0.3") {
+        build(":release:3.1.1",
+                ":rest-client-builder:2.1.1") {
             export = false
         }
-
+        compile (':asset-pipeline:2.14.1')  { export = false }
+        compile (':resources:1.2.14') { export = false }
         runtime ":jquery:1.11.1"
-        runtime ':resources:1.2.14'
     }
 }
 
