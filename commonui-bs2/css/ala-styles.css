@@ -61,9 +61,10 @@ strong{color:#5f5d60;}
 
 /* Nav Login
 ================================= */
-.nav-login, .nav-logged-in {min-width: 80px;}
+.nav-login, .nav-logged-in {min-width: 80px;pointer-events: auto;}
 .nav-logged-in li {font-weight: 700;}
 .nav-logged-in>li {background-color: #d5502a;height: 76px;margin-top: -30px;border-radius: 0 0 6px 6px;margin-bottom: -10px;}
+#bs-example-navbar-collapse-1 {pointer-events: none;}
 #bs-example-navbar-collapse-1 > div > div.span2.visible-desktop > ul > li > a {color: #fff;margin-top: 22px;}
 #bs-example-navbar-collapse-1 > div > div.span2.visible-desktop > ul > li > a:hover {background-color: #D5502A; color: #fff;text-decoration: none;}
 #bs-example-navbar-collapse-1 > div > div.span2.visible-desktop > ul > li > a:visited,#bs-example-navbar-collapse-1 > div > div.span2.hidden-phone > ul > li > a:active,#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:focus {background-color: #D5502A;}
@@ -74,7 +75,7 @@ strong{color:#5f5d60;}
 #global-search {padding: 0;}
 #global-search #biesearch {width: 487px;}
 .form-control {border-radius: 0;}
-.search-form-icon {position: relative;color: #637073;display: block;}
+.search-form-icon {position: relative;color: #637073;display: block;pointer-events: auto;}
 .search-form-icon .form-control {line-height: 1.33;height: 24px;font-size: 18px;padding: 10px 16px 10px 50px;}
 .search-form-icon .form-control {padding-left: 50px;float: left;font-weight: normal;}
 #global-search .search-form-icon label {position: absolute;top: 14px;left: 16px;}
