@@ -2,7 +2,7 @@
 
 ## Usage
 ```
-runtime ":ala-bootstrap2:2.6.0-SNAPSHOT"
+runtime ":ala-bootstrap2:2.7.0"
 // Then ensure at least one of resources or the asset pipeline plugin is included
 // compile ":resources:1.2.14"
 // compile ":asset-pipeline:2.14.1"
