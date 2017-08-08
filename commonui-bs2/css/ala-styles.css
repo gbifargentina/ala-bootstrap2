@@ -110,6 +110,8 @@ footer ul{list-style: none;}
 /*.footer-bonus-brands #aus-govt {background-position: -10px -0px;width: 202px;height: 66px; margin: 20px 40px 72px 0;}*/
 .footer-container {padding: 30px;}
 hr.footer-border {margin: 30px 0 30px 0; border-top: 2px solid #333;}
+.acknowledgement-callout {padding: 20px 20px 15px;margin: 0 0 40px;border: 1px solid #eee;border-left-width: 5px;border-radius: 3px;background-color: #F7F7F7;}
+.acknowledgement-callout-ala {border-left-color: #C44D34;}
 
 /* Alerts
 ================================= */
