@@ -23,6 +23,11 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
+
+        // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-backports-compat23
+        compile group: 'org.codehaus.groovy', name: 'groovy-backports-compat23', version: '2.3.5'
+
+
         compile ('au.org.ala:ala-cas-client:2.2') {
             excludes([group: 'javax.servlet', name: 'servlet-api'])
         }
@@ -38,5 +43,6 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.11.1"
         runtime ':resources:1.2.14'
     }
+
 }
 

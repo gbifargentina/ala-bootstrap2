@@ -2,7 +2,9 @@ modules = {
 
     ala {
         dependsOn 'bootstrap'
-        resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/ala-styles.css', attrs:[media:'all']
+        //resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/font-awesome.min.css', attrs:[media:'all']
+        resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/roboto-fontface.css', attrs:[media:'all']
+        resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/poncho.css', attrs:[media:'all']
     }
 
     bootstrap {
