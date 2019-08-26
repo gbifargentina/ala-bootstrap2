@@ -1,14 +1,12 @@
 modules = {
 
     ala {
-        dependsOn 'bootstrap'
-        //resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/font-awesome.min.css', attrs:[media:'all']
-        resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/roboto-fontface.css', attrs:[media:'all']
+        dependsOn 'bootstrap', 'font-awesome', 'roboto-fontface'
         resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/poncho.css', attrs:[media:'all']
     }
 
     bootstrap {
-        dependsOn 'core', 'font-awesome'
+        dependsOn 'core', 'font-awesome', 'roboto-fontface'
         resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/bootstrap.min.css', attrs:[media:'all']
         resource url: grailsApplication.config.headerAndFooter.baseURL + '/css/bootstrap-responsive.min.css', attrs:[media:'all']
         resource url: grailsApplication.config.headerAndFooter.baseURL + '/js/bootstrap.js'
@@ -35,8 +33,12 @@ modules = {
         resource url:[plugin: 'ala-bootstrap2', dir: 'js', file:'jquery-migrate-1.2.1.min.js']
     }
 
+    'roboto-fontface' {
+        resource url:[plugin: 'ala-bootstrap2', dir: 'css', file: 'roboto-fontface.css'], attrs:[media:'all']
+    }
+
     'font-awesome' {
-        resource url:[plugin: 'ala-bootstrap2', dir: 'css', file: 'font-awesome-4.3.0.css'], attrs:[media:'all']
+        resource url:[plugin: 'ala-bootstrap2', dir: 'css', file: 'font-awesome.min.css'], attrs:[media:'all']
     }
 
 }

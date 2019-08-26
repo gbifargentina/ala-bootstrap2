@@ -35,9 +35,9 @@
                             <div class="col-md-12">
                                 <ol class="breadcrumb pull-left">
                                     <g:each in="${grails.converters.JSON.parse(grailsApplication.config.breadcrumb.path)}" var="path">
-                                        <li><a href="${path.url}">${path.display}</a></li>
+                                        <li><a href="${path.url}">${raw(path.display)}</a></li>
                                     </g:each>
-                                    <li class="active"><span>${grailsApplication.config.breadcrumb.activoDisplay}</span></li>
+                                    <li class="active"><span >${raw(grailsApplication.config.breadcrumb.activoDisplay)}</span></li>
                                 </ol>
                             </div>
                         </div>
@@ -47,8 +47,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-                                <h1>${grailsApplication.config.title}</h1>
-                                <p>${grailsApplication.config.description}</p>
+                                <h1>${raw(grailsApplication.config.title)}</h1>
+                                <p>${raw(grailsApplication.config.description)}</p>
                             </div>
                         </div>
                     </div>
